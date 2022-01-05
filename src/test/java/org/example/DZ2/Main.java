@@ -16,12 +16,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String[][] array = new String[iLength][jLength];
+        String[][] array = new String[4][4];
         System.out.println(Arrays.deepToString(getArrayNew(array)));
     }
 
     public static String[][] getArrayNew(String[][] arrayNew) {
-        String[][] arrayCopy = (String[][])Arrays.copyOf(arrayNew, 4);
+        String[][] arrayCopy = Arrays.copyOf(arrayNew, 4);
         getArrayCopy(arrayCopy);
         int sum = 0;
         int[][] arrInt = new int[arrayCopy.length][getArrayCopy_I(arrayNew)];
