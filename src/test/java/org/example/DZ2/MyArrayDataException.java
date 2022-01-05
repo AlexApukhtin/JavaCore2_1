@@ -1,0 +1,15 @@
+
+package org.example.DZ2;
+
+public class MyArrayDataException extends NumberFormatException {
+    private static String MESSAGE = "В массиве есть элемент типа String. Его координаты: i=%s; j=%d";
+    private int i;
+
+    public MyArrayDataException(int i, int j) {
+        super(String.format(MESSAGE, i, j));
+    }
+
+    public int getI() {
+        return this.i;
+    }
+}
