@@ -28,8 +28,8 @@ public class Main {
                         sum += arrInt[i][j];
                         count++;
                     }catch (NumberFormatException fe){
+                        fe.printStackTrace();
                         throw new MyArrayDataException(i,j);
-                        //fe.printStackTrace();
                     }
                 }while (count==0);
             }

@@ -9,9 +9,9 @@ public class MyArraySizeException extends RuntimeException{
         super(String.format(MESSAGE, i, j));
     }
 
-    public MyArraySizeException(String message, Throwable cause) {
-        super(message, cause);
-    }
+   // public MyArraySizeException(String message, Throwable cause) {
+    //    super(message, cause);
+    //}
 
     public int getI() {
         return i;
