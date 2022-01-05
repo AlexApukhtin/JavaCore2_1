@@ -1,6 +1,6 @@
 package org.example.DZ2;
 
-public class MyArrayDataException extends RuntimeException{
+public class MyArrayDataException extends NumberFormatException{
 
 
     private static String MESSAGE = "В массиве есть элемент типа String. Его координаты: i=%s; j=%d";
@@ -10,9 +10,9 @@ public class MyArrayDataException extends RuntimeException{
         super(String.format(MESSAGE, i, j));
     }
 
-    public MyArrayDataException(String message, Throwable cause) {
-        super(message, cause);
-    }
+//    public MyArrayDataException(String message, Throwable cause) {
+//        super(message, cause);
+//    }
 //
     public int getI() {
         return i;
