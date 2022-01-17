@@ -16,7 +16,7 @@ public class Collection {
             count++;
             value.add(1);
             for ( int j = 0; j < i; j++) {
-                if(str[j].equals(str[i])==true){
+                if(str[j].equals(str[i])){
                     count--;
                     if(value.get(j)>1 ){
                         count++;
@@ -29,7 +29,7 @@ public class Collection {
         }
 
         for (int j = 0; j < month.size(); j++) {
-            if(month.get(j).equals(str[j])==false){
+            if(!month.get(j).equals(str[j])){
                 value.set(j,1);
                 //value.remove(j);
             }

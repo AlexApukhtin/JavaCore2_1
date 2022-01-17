@@ -2,8 +2,8 @@ package org.example.DZ3;
 
 public class People {
 
-    private String surname;
-    private String phone;
+    protected String surname;
+    protected String phone;
 
     public People(String phone, String surname) {
         this.surname = surname;
@@ -26,4 +26,3 @@ public class People {
         return phone;
     }
 }
-
