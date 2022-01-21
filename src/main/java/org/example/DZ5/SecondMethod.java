@@ -28,11 +28,11 @@ public class SecondMethod {
         int size = mass1.getArrayLength() + mass2.getArrayLength();
         //ArrayList<Float> fl = new ArrayList(Arrays.asList(mass1.getList(), mass2.getList()));
         //Float[][] array = fl.toArray(new Float[0][0]);
-        //System.out.println(Arrays.toString(array));
+        //System.out.println(Arrays.deepToString(array));
         float[] finalArr = new float[size];
-        System.arraycopy(mass1.getArray(), 0, finalArr, 0, size/2);
-        System.arraycopy(mass2.getArray(), 0, finalArr, size/2, size/2);
-        System.out.println("One thread time "+ (System.currentTimeMillis() - startTime));
+        System.arraycopy(mass1.getArray(), 0, finalArr, 0, mass1.getArrayLength() );
+        System.arraycopy(mass2.getArray(), 0, finalArr, mass1.getArrayLength() , mass2.getArrayLength());
+        System.out.println("One thread time "+ (System.currentTimeMillis() - startTime)+ " ms.");
     }
 }
 
