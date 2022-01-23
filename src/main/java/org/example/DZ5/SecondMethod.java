@@ -1,5 +1,6 @@
 package org.example.DZ5;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SecondMethod {
@@ -26,9 +27,9 @@ public class SecondMethod {
             e.printStackTrace();
         }
         int size = mass1.getArrayLength() + mass2.getArrayLength();
-        //ArrayList<Float> fl = new ArrayList(Arrays.asList(mass1.getList(), mass2.getList()));
-        //Float[][] array = fl.toArray(new Float[0][0]);
-        //System.out.println(Arrays.deepToString(array));
+//        ArrayList<Float> fl = new ArrayList(Arrays.asList(mass1.getList(), mass2.getList()));
+//        Float[][] array = fl.toArray(new Float[0][0]);
+//        System.out.println(Arrays.deepToString(array));
         float[] finalArr = new float[size];
         System.arraycopy(mass1.getArray(), 0, finalArr, 0, mass1.getArrayLength() );
         System.arraycopy(mass2.getArray(), 0, finalArr, mass1.getArrayLength() , mass2.getArrayLength());
@@ -39,7 +40,7 @@ public class SecondMethod {
 class Mass extends Thread{
 
     final float[] array;
-    // ArrayList<Float> list = new ArrayList<>();
+     //ArrayList<Float> list = new ArrayList<>();
 
     Mass(float[] array){
         this.array = array;
@@ -53,15 +54,15 @@ class Mass extends Thread{
         return array;
     }
 
-    // public ArrayList<Float> getList() {
-    //     return list;
-    // }
+//     public ArrayList<Float> getList() {
+//         return list;
+//     }
 
     @Override
     public void run() {
         for (int i = 0; i < array.length; i++) {
             array[i] = (float) (array[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-            //list.add(array[i]);
+        //  list.add(array[i]);
         }
     }
 }

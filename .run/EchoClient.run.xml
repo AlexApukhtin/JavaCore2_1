@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EchoClient" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.example.DZ6.EchoClient" />
+    <module name="JC2_DZ" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
